@@ -28,12 +28,15 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="copyright"><a href="https://packagist.com/home">Private Packagist</a></section>
+                
                 <nav class="site-footer-nav">
-                    <a href="{{@blog.url}}">Latest Posts</a>
-                    {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
-                    {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    <a href="https://packagist.com/about/">About</a>
+                    <a href="https://twitter.com/packagist">Twitter</a>
+                    <a href="https://www.facebook.com/packagist/">Facebook</a>
+                    <a href="https://packagist.com/about/terms">Terms</a>
+                    <a href="https://packagist.com/about/privacy">Privacy</a>
+                    <a href="https://packagist.com/about/imprint">Imprint</a>
                 </nav>
             </div>
         </footer>
