@@ -614,7 +614,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-primary-tag {
     margin: 0 0 0.2em;
-    color: var(--ghost-accent-color);
+    color: #e1743f;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -890,7 +890,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .article-tag a {
-    color: var(--ghost-accent-color);
+    color: #e1743f;
 }
 
 .article-title {
