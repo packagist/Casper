@@ -60,11 +60,16 @@
                     {{/if}}
                 </div>
 
+		{{!--
+		Disabling subscribe
+
                 {{#unless @member}}
                     <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
                 {{else}}
                     <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
                 {{/unless}}
+
+		--}}
             </div>
         </nav>
     </header>
@@ -77,11 +82,10 @@
     {{!-- The global footer at the very bottom of the screen --}}
     <footer class="site-footer outer">
         <div class="inner">
-            <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="copyright"><a href="https://packagist.com/home">Private Packagist</a></section>
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
-            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>
     </footer>
 

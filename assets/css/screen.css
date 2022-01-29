@@ -92,6 +92,7 @@ production stylesheet in assets/built/screen.css
 .site-header {
     position: relative;
     color: #fff;
+    font-weight: 600;
     background: var(--ghost-accent-color);
 }
 
@@ -123,6 +124,7 @@ production stylesheet in assets/built/screen.css
     z-index: 10;
     margin: 0 0 0.15em;
     padding: 0;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
 }
 
 .site-logo {
@@ -135,6 +137,7 @@ production stylesheet in assets/built/screen.css
     margin: 0 auto;
     line-height: 1.2em;
     opacity: 0.8;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 600px) {
@@ -175,6 +178,7 @@ production stylesheet in assets/built/screen.css
     font-size: 1.6rem;
     line-height: 1.3em;
     color: #fff;
+    font-weight: 600;
     background: var(--ghost-accent-color);
 }
 
@@ -243,11 +247,11 @@ production stylesheet in assets/built/screen.css
 .gh-head-menu .nav a {
     display: inline-block;
     padding: 5px 0;
-    opacity: 0.8
+    color: #fff;
 }
 
 .gh-head-menu .nav a:hover {
-    opacity: 1;
+    color: #a74d2d;
 }
 
 
@@ -280,7 +284,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-social a {
-    opacity: 0.8
+    color: #fff;
 }
 
 .gh-social a + a {
@@ -288,13 +292,17 @@ production stylesheet in assets/built/screen.css
 }
 
 .gh-social a:hover {
-    opacity: 1;
+    color: #a74d2d;
 }
 
 .gh-social svg {
     height: 22px;
     width: 22px;
     fill: #fff;
+}
+
+.gh-social svg:hover {
+    fill: #a74d2d;
 }
 
 .gh-social-facebook svg {
@@ -312,6 +320,11 @@ a.gh-head-button {
     line-height: 1em;
     background: var(--button-bg-color, #fff);
     border-radius: 30px;
+}
+
+a.gh-head-button:hover {
+    background: #a74d2d;
+    color: #fff;
 }
 
 
@@ -1691,29 +1704,29 @@ iframe.instagram-media + script + :not([id]) {
     margin: 40px 0 0 0;
     padding: 40px 4vmin 140px;
     color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    font-weight: 600;
+    background: #ecc054;
 }
 
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto 1fr auto;
-    color: rgba(255,255,255,0.7);
+    color: #fff;
     font-size: 1.3rem;
 }
 
 .site-footer .copyright a {
     color: #fff;
-    letter-spacing: -0.015em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: #fff;
 }
 
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
+    color: #a74d2d;
     text-decoration: none;
 }
 
