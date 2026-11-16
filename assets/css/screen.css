@@ -300,6 +300,19 @@ production stylesheet in assets/built/screen.css
     color: #fff;
 }
 
+/* Packagist: darken the top of the cover image so the white nav stays readable on light photos */
+:is(.home-template, .paged:not(.tag-template):not(.author-template)).has-cover:not(.gh-head-open) .gh-head::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 120px;
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    pointer-events: none;
+}
+
 .gh-head a {
     text-decoration: none;
 }
@@ -494,6 +507,16 @@ production stylesheet in assets/built/screen.css
 .has-cover .gh-head-menu .nav > li > a,
 .has-cover .gh-head .gh-search {
     color: #fff;
+}
+
+/* Packagist: white on the yellow accent bar or a light photo needs a shadow to stay legible */
+.has-cover .gh-head-menu .nav > li > a,
+.has-cover .gh-head-logo {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.has-cover .gh-head .gh-search svg {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 
 .has-cover .gh-head-menu .nav > li > a:hover,
@@ -738,6 +761,7 @@ html.gh-navigation-open {
 .has-cover .gh-burger::before,
 .has-cover .gh-burger::after {
     background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .gh-burger::before {
