@@ -80,23 +80,50 @@
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer outer">
-        <div class="inner">
-            <section class="copyright"><a href="https://packagist.com/home">Private Packagist</a></section>
-            <div class="site-footer-center">
-                <div class="site-footer-social-links">
-                    {{#social_accounts @site}}
-                        <a href="{{href}}" target="_blank" rel="noopener" aria-label="{{name}}">
-                            {{#> (concat "icons/" type)}}
-                                {{!-- Fallback rendered when no per-platform icon partial exists --}}
-                                <span>{{name}}</span>
-                            {{/undefined}}
-                        </a>
-                    {{/social_accounts}}
+    {{!-- Packagist: same structure, links and styles as the packagist.com footer
+         (private-packagist manager/templates/base.html.twig, block footer) --}}
+    <footer class="site-footer">
+        <div class="site-footer-row">
+            <div class="footer-container">
+                <div class="footer-head">
+                    <a href="https://packagist.com/" class="footer-link-logo">
+                        <img src="{{asset "images/private-packagist-logo-horizontal-2025.svg"}}" alt="Private Packagist" width="366" height="35">
+                    </a>
+                    <div class="footer-links-social">
+                        <a href="https://www.linkedin.com/company/packagist" class="footer-social-icon" aria-label="LinkedIn">{{> "icons/linkedin"}}</a>
+                        <a href="https://phpc.social/@packagist" class="footer-social-icon" aria-label="Mastodon">{{> "icons/mastodon"}}</a>
+                        <a href="https://bsky.app/profile/packagist.com" class="footer-social-icon" aria-label="Bluesky">{{> "icons/bluesky"}}</a>
+                        <a href="https://twitter.com/packagist" class="footer-social-icon" aria-label="X">{{> "icons/x"}}</a>
+                    </div>
                 </div>
-                <nav class="site-footer-nav">
-                    {{navigation type="secondary"}}
-                </nav>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Product</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="https://blog.packagist.com" class="footer-link">Blog</a></li>
+                            <li><a href="https://status.packagist.com/" class="footer-link">Status</a></li>
+                            <li><a href="https://packagist.com/docs/changelog" class="footer-link">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Company</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="https://packagist.com/about/" class="footer-link">About</a></li>
+                            <li><a href="https://packagist.com/about/careers" class="footer-link">Careers</a></li>
+                            <li><a href="https://packagist.com/about/brand-assets" class="footer-link">Brand Assets</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Support</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="mailto:contact@packagist.com" class="footer-link">Contact us</a></li>
+                            <li><a href="https://packagist.com/about/security" class="footer-link">Security</a></li>
+                            <li><a href="https://packagist.com/about/terms" class="footer-link">Terms</a></li>
+                            <li><a href="https://packagist.com/about/privacy" class="footer-link">Privacy</a></li>
+                            <li><a href="https://packagist.com/about/imprint" class="footer-link">Imprint</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
