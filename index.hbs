@@ -25,11 +25,8 @@ into the {body} of the default.hbs template --}}
     {{#match @custom.header_style "!=" "Hidden"}}
         <div class="site-header-inner inner">
             {{#match @custom.navigation_layout "Logo on cover"}}
-                {{#if @site.logo}}
-                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-                {{else}}
-                    <h1 class="site-title">{{@site.title}}</h1>
-                {{/if}}
+                {{!-- Packagist: always show the site title as text on the cover, not the logo image --}}
+                <h1 class="site-title">{{@site.title}}</h1>
             {{/match}}
             {{#if @site.description}}
                 <p class="site-description">{{@site.description}}</p>
