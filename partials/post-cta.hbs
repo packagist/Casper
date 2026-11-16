@@ -1,0 +1,21 @@
+{{!-- Packagist: Private Packagist call to action at the end of every post (AMK-5).
+Posts tagged "Private Packagist" or "changelog" get the trial pitch, all other posts the
+softer "Using Composer at work?" variant. Add the internal tag #no-cta to a post to hide it,
+for example on posts that already end with their own sign-up section.
+The links carry UTM parameters so Plausible on packagist.com shows which variant and which
+post sent each visitor. --}}
+{{^has tag="#no-cta"}}
+<aside class="pp-cta gh-canvas">
+    <div class="pp-cta-box">
+    {{#has tag="Private Packagist, changelog"}}
+        <h2 class="pp-cta-title">Try Private Packagist free for 14 days</h2>
+        <p>Private Packagist is the Composer repository for your team: private packages, mirrors of Packagist.org and third-party repositories, security monitoring, and organization-wide policies. No credit card needed for the trial.</p>
+        <a class="pp-cta-button" href="https://packagist.com/?utm_source=blog.packagist.com&amp;utm_medium=cta&amp;utm_campaign=cta-product&amp;utm_content={{slug}}">Start your free trial</a>
+    {{else}}
+        <h2 class="pp-cta-title">Using Composer at work?</h2>
+        <p>Composer and Packagist.org are maintained by the team behind Private Packagist, and Private Packagist subscriptions fund that work. Private Packagist gives your team private packages, mirrors of Packagist.org and third-party repositories, and security monitoring. Free for 14 days.</p>
+        <a class="pp-cta-button" href="https://packagist.com/?utm_source=blog.packagist.com&amp;utm_medium=cta&amp;utm_campaign=cta-composer&amp;utm_content={{slug}}">Learn about Private Packagist</a>
+    {{/has}}
+    </div>
+</aside>
+{{/has}}
