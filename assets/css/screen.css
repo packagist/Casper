@@ -1020,6 +1020,9 @@ html.gh-navigation-open {
 
 .post-card-primary-tag {
     color: #e1743f;
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
 }
 
 .post-card-featured {
@@ -1305,6 +1308,11 @@ html.no-infinite-scroll .pagination {
 
 .article-tag a {
     color: #e1743f;
+}
+
+.article-tag .post-card-primary-tag {
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
 }
 
 .article-title {
